@@ -2,10 +2,41 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
 </head>
 <body>
-	<h1>Hola amigo</h1>
-	<p>Jeg hedder Gretar Helgason</p>
+	<h1>Vue Introduction</h1>
+	
+	<div id="app">
 
+		<div class="field">
+  			<div class="control">
+    			<input class="input" type="text" v-model="nafn" placeholder="Text input">
+  			</div>
+		</div>
+
+		<div class="field">
+  			<div class="control">
+    			<input class="input" type="text" v-model="eftirnafn" placeholder="Text input">
+  			</div>
+		</div>
+
+		<p>Nafnið þitt er: {{ nafn }} {{ eftirnafn }}</p>
+	</div>
+
+
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		var app = new Vue ({
+			el: "#app",
+			data: {
+				nafn: "",
+				eftirnafn: ""
+			}
+		});
+		
+	</script>
 </body>
 </html>
