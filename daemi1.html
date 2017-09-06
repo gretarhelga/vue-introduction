@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<div id="app">
+		<input type="text" v-model="leita">
+		<a target=”_blank” v-bind:href="url">Leita</a>
+
+
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		
+		var app = new Vue({
+			el: "#app",
+			data:{
+				leita: "",
+				url: "http://www.google.com/search?q="
+			}
+
+		});
+	</script>
+</body>
+</html>

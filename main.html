@@ -16,15 +16,13 @@
   			</div>
 		</div>
 
-		<div class="field">
-  			<div class="control">
-    			<input class="input" type="text" v-model="eftirnafn" placeholder="Text input">
-  			</div>
-		</div>
 
-		<p>Nafnið þitt er: {{ nafn }} {{ eftirnafn }}</p>
+		<p v-show="nafn !== ''">Nafnið þitt er: {{ nafn }}</p>
+
+		<p v-bind:id="id">Þessi texti hefur Id</p>
+
+
 	</div>
-
 
 
 	<script src="https://unpkg.com/vue"></script>
@@ -33,7 +31,8 @@
 			el: "#app",
 			data: {
 				nafn: "",
-				eftirnafn: ""
+				check: false,
+				id: 3
 			}
 		});
 		
