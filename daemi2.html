@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+	<div id="app">
+
+		<form action="http://www.google.com/search" method="GET" target="_blank">
+			<input  type="hidden" name="q" v-model="midjan">
+			<input type="text" v-model="ordid">
+			<button type="submit">Submit</button>
+		</form>
+
+	</div>
+
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript">
+		
+		var app = new Vue({
+			el: "#app",
+			data:{
+				midjan: "",
+				leita: ""
+			}
+		});
+	</script>
+</body>
+</html>
